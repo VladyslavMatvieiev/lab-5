@@ -1,0 +1,23 @@
+#include <iostream>
+class Rectangle {
+public:
+    int length;
+    int width;
+    int CalculatePerimeter() {
+        return 2 * (length + width);
+    }
+};
+
+int main() {
+    Rectangle rectangle;
+
+    std::cout << "Enter the length: ";
+    std::cin >> rectangle.length;
+
+    std::cout << "Enter the width: ";
+    std::cin >> rectangle.width;
+    
+    int perimeter = rectangle.CalculatePerimeter();
+    std::cout << "Perimeter: " << perimeter << std::endl;
+    return 0;
+}
