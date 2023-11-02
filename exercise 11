@@ -1,0 +1,15 @@
+#include <iostream>
+
+void myFunc(int x) {
+    int y = 4 * x;
+    std::cout << "Result: " << y << std::endl;
+}
+
+int main() {
+    int x = 10;
+    int y;
+
+    myFunc(x);
+
+    return 0;
+}
