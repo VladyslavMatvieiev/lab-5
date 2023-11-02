@@ -1,0 +1,11 @@
+#include <iostream>
+int main() {
+    double number;
+    std::cout << "Enter a number: ";
+    std::cin >> number;
+    float float_num = static_cast<float>(number); 
+    int int_num = static_cast<int>(number);
+    std::cout << "Float: " << float_num << std::endl;
+    std::cout << "Int: " << int_num << std::endl;
+    return 0;
+}
