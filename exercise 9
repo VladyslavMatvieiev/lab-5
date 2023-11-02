@@ -1,0 +1,18 @@
+#include <iostream>
+
+int CalculatePerimeter(int length, int width) {
+    return 2 * (length + width);
+}
+
+int main() {
+    int length = 2;
+    int width = 6;
+    int perimeter = CalculatePerimeter(length, width);
+
+    std::cout << "Perimeter:\n"
+              << "Length: " << length << "\n"
+              << "Width: " << width << "\n"
+              << "Equals: " << perimeter << std::endl;
+
+    return 0;
+}
