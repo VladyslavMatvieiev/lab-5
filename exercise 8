@@ -1,0 +1,52 @@
+#include <iostream>
+#include <string>
+
+int main() {
+    std::string city, region, street, house, apartment;
+
+    // Введення значень елементів адреси
+    std::cout << "Enter the city: ";
+    std::cin >> city;
+
+    std::cout << "Enter the district: ";
+    std::cin >> region;
+
+    std::cout << "Enter the street: ";
+    std::cin >> street;
+
+    std::cout << "Enter the house: ";
+    std::cin >> house;
+
+    std::cout << "Enter the number in house: ";
+    std::cin >> apartment;
+
+    // Формування всієї адреси
+    std::string full_address = city + ", " + region + ", street. " + street + ", house. " + house + ", number_house. " + apartment;
+
+    // Визначення довжини елементів адреси та всієї адреси
+    int city_length = city.length();
+    int region_length = region.length();
+    int full_address_length = full_address.length();
+
+    // Порівняння міста та району за довжиною
+    std::string result;
+    if (city_length > region_length) {
+        result = "The city is longer than the district";
+    }
+    else if (city_length < region_length) {
+        result = "The district is longer than the city";
+    }
+    else {
+        result = "The city and district have the same length";
+    }
+
+    // Виведення результатів
+    std::cout << "City: " << city << ", District: " << region << std::endl;
+    std::cout << "Address: " << full_address << std::endl;
+    std::cout << "City length: " << city_length << std::endl;
+    std::cout << "District Length: " << region_length << std::endl;
+    std::cout << "Length of the full address: " << full_address_length << std::endl;
+    std::cout << result << std::endl;
+
+    return 0;
+}
